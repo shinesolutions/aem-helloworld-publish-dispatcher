@@ -1,0 +1,21 @@
+<VirtualHost *:80>
+  ServerName default
+  ServerAdmin root@localhost
+
+  ## Vhost docroot
+  DocumentRoot "/var/www/html/"
+
+  <Directory />
+    <IfModule dispatcher_module>
+      SetHandler dispatcher-handler
+    </IfModule>
+    Options FollowSymLinks
+    AllowOverride None
+  </Directory>
+
+  ## Logging
+  ErrorLog "/var/log/httpd/default_error.log"
+  ServerSignature Off
+  CustomLog "/var/log/httpd/access_log" combined
+</VirtualHost>
+
