@@ -1,1 +1,3 @@
 #site rewrite map
+helloworld /content/helloworld
+/helloworld /content/helloworld

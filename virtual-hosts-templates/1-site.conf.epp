@@ -17,8 +17,13 @@
   ErrorLog "/var/log/httpd/default_error.log"
   ServerSignature Off
   CustomLog "/var/log/httpd/access_log" combined
-  
+
   # Security - Prevent clickjacking
   Header always append X-Frame-Options SAMEORIGIN
-</VirtualHost>
 
+  # Site rewrite rules
+  RewriteEngine on
+  RewriteMap site txt:conf.d/site/rewritemap.txt
+  RewriteRule ^/campaigns/(.+[^/])/?$ %{HTTP:X-Forwarded-Proto}://%{HTTP_HOST}${site:${lowercase:${url_encode:$1}}|/} [QSA,R=301,NC,L]
+
+</VirtualHost>
