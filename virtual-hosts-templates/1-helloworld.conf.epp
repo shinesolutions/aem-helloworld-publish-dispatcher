@@ -21,9 +21,9 @@
   # Security - Prevent clickjacking
   Header always append X-Frame-Options SAMEORIGIN
 
-  # Site rewrite rules
+  # Hello World rewrite rules
   RewriteEngine on
-  RewriteMap site txt:conf.d/site/rewritemap.txt
-  RewriteRule ^/campaigns/(.+[^/])/?$ %{HTTP:X-Forwarded-Proto}://%{HTTP_HOST}${site:${lowercase:${url_encode:$1}}|/} [QSA,R=301,NC,L]
+  RewriteMap helloworld txt:conf.d/helloworld/rewritemap.txt
+  RewriteRule ^/campaigns/(.+[^/])/?$ %{HTTP:X-Forwarded-Proto}://%{HTTP_HOST}${helloworld:${lowercase:${url_encode:$1}}|/} [QSA,R=301,NC,L]
 
 </VirtualHost>
