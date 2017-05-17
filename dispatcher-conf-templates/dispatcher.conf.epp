@@ -1,8 +1,10 @@
+<%- | String  $conf_dir = '/etc/httpd/conf.modules.d' | -%>
+
 # ************************************
 # Managed by Puppet AEM Module
 # ************************************
 <IfModule dispatcher_module>
-    DispatcherConfig            /etc/httpd/conf.modules.d/dispatcher.farms.any
+    DispatcherConfig            <%= $conf_dir %>/dispatcher.farms.any
     DispatcherLog               /var/log/httpd/dispatcher.log
     DispatcherLogLevel          warn
     DispatcherNoServerHeader    off
@@ -10,4 +12,3 @@
     DispatcherUseProcessedURL   off
     DispatcherPassError         0
 </IfModule>
-
