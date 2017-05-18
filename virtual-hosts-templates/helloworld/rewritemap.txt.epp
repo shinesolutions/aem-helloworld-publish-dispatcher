@@ -1,3 +1,3 @@
 # Hello World rewrite map
-helloworld /content/helloworld
-/helloworld /content/helloworld
+helloworld /content/helloworld.html
+/helloworld /content/helloworld.html

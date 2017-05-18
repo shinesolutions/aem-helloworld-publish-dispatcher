@@ -47,4 +47,6 @@ LogFormat "%{Referer}i -> %U" referer
 LogFormat "%{User-agent}i" agent
 LogFormat "%{X-Forwarded-For}i %l %u %t \"%r\" %s %b \"%{Referer}i\" \"%{User-agent}i\"" forwarded
 
+<% if $conf_dir != '/etc/httpd/conf.d/' and "${conf_dir}/" != '/etc/httpd/conf.d/' { -%>
 IncludeOptional "/etc/httpd/conf.d/*.conf"
+<% } -%>
