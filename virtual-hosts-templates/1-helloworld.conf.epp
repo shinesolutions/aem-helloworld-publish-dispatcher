@@ -23,7 +23,44 @@
 
   # Hello World rewrite rules
   RewriteEngine on
+  RewriteMap lc int:tolower
   RewriteMap helloworld txt:conf.d/helloworld/rewritemap.txt
-  RewriteRule ^/campaigns/(.+[^/])/?$ %{HTTP:X-Forwarded-Proto}://%{HTTP_HOST}${helloworld:${lowercase:${url_encode:$1}}|/} [QSA,R=301,NC,L]
+  RewriteRule ^/campaigns/(.+[^/])/?$  http://%{HTTP_HOST}${helloworld:${lc:$1}|/} [QSA,R=301,NC,L]
+
+</VirtualHost>
+
+Listen 443
+<VirtualHost *:443>
+  ServerName default
+  ServerAdmin root@localhost
+
+  ## Vhost docroot
+  DocumentRoot "/var/www/html/"
+
+  <Directory />
+    <IfModule dispatcher_module>
+      SetHandler dispatcher-handler
+    </IfModule>
+    Options FollowSymLinks
+    AllowOverride None
+  </Directory>
+
+  ## Logging
+  ErrorLog "/var/log/httpd/default_error.log"
+  ServerSignature Off
+  CustomLog "/var/log/httpd/access_log" combined
+
+  # Security - Prevent clickjacking
+  Header always append X-Frame-Options SAMEORIGIN
+
+  # Security - Use SSL
+  SSLEngine on
+  SSLCertificateFile /etc/ssl/aem.unified-dispatcher.cert
+
+  # Hello World rewrite rules
+  RewriteEngine on
+  RewriteMap lc int:tolower
+  RewriteMap helloworld txt:conf.d/helloworld/rewritemap.txt
+  RewriteRule ^/campaigns/(.+[^/])/?$ https://%{HTTP_HOST}${helloworld:${lc:$1}|/} [QSA,R=301,NC,L]
 
 </VirtualHost>
