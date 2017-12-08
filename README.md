@@ -1,6 +1,6 @@
 # AEM Hello World Publish-Dispatcher
 
-This is an example AEM Hello World artifact that will be deployed to an AEM Publish-Dispatcher instance using [AEM AWS Stack Provisioner](https://github.com/shinesolutions/aem-aws-stack-provisioner).
+This is an example AEM Hello World artifact that will be deployed to an AEM Publish-Dispatcher instance.
 
 This artifact contains:
 * [Apache configuration template(s)](https://httpd.apache.org/docs/2.4/configuring.html) in `apache-conf-templates` directory
