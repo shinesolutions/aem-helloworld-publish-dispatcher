@@ -24,6 +24,10 @@
   # Hello World rewrite rules
   RewriteEngine on
   RewriteMap helloworld txt:conf.d/helloworld/rewritemap.txt
-  RewriteRule ^/campaigns/(.+[^/])/?$ %{HTTP:X-Forwarded-Proto}://%{HTTP_HOST}${helloworld:${lowercase:${url_encode:$1}}|/} [QSA,R=301,NC,L]
 
+  # Rewrite condition to check if path exist in map- prevents routing loop
+  RewriteCond ${helloworld:$1} ^.+
+
+  # Rewrite rule to lookup map
+  RewriteRule ^/(.+[^/])/?$ ${helloworld:$1} [QSA,R=301,NC,L]
 </VirtualHost>
