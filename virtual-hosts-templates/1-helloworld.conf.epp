@@ -29,5 +29,5 @@
   RewriteCond ${helloworld:$1} ^.+
 
   # Rewrite rule to lookup map
-  RewriteRule ^/(.+[^/])/?$ ${helloworld:$1} [QSA,R=301,NC,L]
+  RewriteRule ^(.+[^/])/?$ ${helloworld:$1} [QSA,R=301,NC,L]
 </VirtualHost>
