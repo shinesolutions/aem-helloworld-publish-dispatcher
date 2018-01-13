@@ -25,6 +25,6 @@ The artifact will be written at `stage/aem-helloworld-publish-dispatcher-<versio
 After the deployment of AEM Hello World Publish-Dispatcher artifact and [AEM Hello World](https://github.com/shinesolutions/aem-helloworld/) package, the following URL paths should be accessible via AEM Publish-Dispatcher instance:
 
 * `/content/helloworld` - Hello World page served from AEM Publish instance
-* `/helloworld` - a rewrite rule (using relative path) configured in Publish-Dispatcher instance
-* `/campaign/helloworld` - a rewrite rule (using absolute path) configured in Publish-Dispatcher instance
+* `/cafe-helloworld` - a rewrite rule (using relative path) configured in Publish-Dispatcher instance
+* `/cafe/helloworld` - a rewrite rule (using absolute path) configured in Publish-Dispatcher instance
 * `/images/earth.jpg` - a sample static asset image served from Apache docroot
