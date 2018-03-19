@@ -45,6 +45,4 @@ LogFormat "%{Referer}i -> %U" referer
 LogFormat "%{User-agent}i" agent
 LogFormat "%{X-Forwarded-For}i %l %u %t \"%r\" %s %b \"%{Referer}i\" \"%{User-agent}i\"" forwarded
 
-IncludeOptional "/etc/httpd/conf.d/*.conf"
-
-
+IncludeOptional "<%= $dispatcher_conf_dir %>/*.conf"

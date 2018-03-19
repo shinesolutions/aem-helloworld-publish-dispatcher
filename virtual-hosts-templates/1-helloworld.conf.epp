@@ -3,7 +3,7 @@
   ServerAdmin root@localhost
 
   ## Vhost docroot
-  DocumentRoot "/var/www/html/"
+  DocumentRoot "<%= $docroot_dir %>"
 
   <Directory />
     <IfModule dispatcher_module>
