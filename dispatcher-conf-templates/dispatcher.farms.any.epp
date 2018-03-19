@@ -34,11 +34,12 @@
       /rend01
         {
         # Hostname or IP of the render
-        /hostname "<%= $facts[publishhost] %>"
+        /hostname "<%= $publish_host %>"
         # Port of the render
-        /port "4503"
+        /port "<%= $publish_port %>"
         # Connect timeout in milliseconds, 0 to wait indefinitely
         # /timeout "0"
+        /secure "<%= $publish_secure %>"
         # Avoid caching IP in anticipation of instance recovery with a different IP
         /always-resolve "1"
         }
@@ -188,7 +189,7 @@
       # dispatcher will store files relative to this directory and subsequent
       # requests may be "declined" by the dispatcher, allowing the webserver
       # to deliver them just like static files.
-      /docroot "/var/www/html/"
+      /docroot "<%= $docroot_dir %>"
 
       # Sets the level upto which files named ".stat" will be created in the
       # document root of the webserver. When an activation request for some
