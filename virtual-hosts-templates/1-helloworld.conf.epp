@@ -31,3 +31,41 @@
   # Rewrite rule to lookup map
   RewriteRule ^(.+[^/])/?$ ${helloworld:$1} [QSA,R=301,NC,L]
 </VirtualHost>
+
+<VirtualHost *:443>
+  ServerName default
+  ServerAdmin root@localhost
+
+  ## Vhost docroot
+  DocumentRoot "<%= $docroot_dir %>"
+
+  <Directory />
+    <IfModule dispatcher_module>
+      SetHandler dispatcher-handler
+    </IfModule>
+    Options FollowSymLinks
+    AllowOverride None
+  </Directory>
+
+  ## Logging
+  ErrorLog "/var/log/httpd/default_error.log"
+  ServerSignature Off
+  CustomLog "/var/log/httpd/access_log" combined
+
+  # Security - Prevent clickjacking
+  Header always append X-Frame-Options SAMEORIGIN
+
+  # Hello World rewrite rules
+  RewriteEngine on
+  RewriteMap helloworld txt:conf.d/helloworld/rewritemap.txt
+
+  # Rewrite condition to check if path exist in map- prevents routing loop
+  RewriteCond ${helloworld:$1} ^.+
+
+  # Rewrite rule to lookup map
+  RewriteRule ^(.+[^/])/?$ ${helloworld:$1} [QSA,R=301,NC,L]
+
+  # Security - Use SSL
+  SSLEngine on
+  SSLCertificateFile <%= $ssl_cert %>
+</VirtualHost>
