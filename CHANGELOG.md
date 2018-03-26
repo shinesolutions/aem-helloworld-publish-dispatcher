@@ -1,3 +1,6 @@
+### 0.10.2
+*
+
 ### 0.10.1
 * Parameterise all configuration directories
 * Add https listen port #9
