@@ -35,8 +35,8 @@ EnableSendfile On
 #Listen 80
 
 
-Include "/etc/httpd/conf.modules.d/*.load"
-Include "/etc/httpd/conf.modules.d/*.conf"
+Include "<%= $dispatcher_conf_dir %>/*.load"
+Include "<%= $dispatcher_conf_dir %>/*.conf"
 Include "/etc/httpd/conf/ports.conf"
 
 LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
@@ -45,4 +45,4 @@ LogFormat "%{Referer}i -> %U" referer
 LogFormat "%{User-agent}i" agent
 LogFormat "%{X-Forwarded-For}i %l %u %t \"%r\" %s %b \"%{Referer}i\" \"%{User-agent}i\"" forwarded
 
-IncludeOptional "<%= $dispatcher_conf_dir %>/*.conf"
+IncludeOptional "<%= $virtual_hosts_dir %>/*.conf"
