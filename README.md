@@ -1,3 +1,5 @@
+[![Build Status](https://img.shields.io/travis/shinesolutions/aem-helloworld-publish-dispatcher.svg)](http://travis-ci.org/shinesolutions/aem-helloworld-publish-dispatcher)
+
 # AEM Hello World Publish-Dispatcher
 
 This is an example AEM Hello World artifact that will be deployed to an AEM Publish-Dispatcher instance.
