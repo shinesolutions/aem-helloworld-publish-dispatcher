@@ -1,2 +1,7 @@
+dist: trusty
+sudo: true
+language: ruby
+rvm:
+  - "2.4"
 script:
   - make ci

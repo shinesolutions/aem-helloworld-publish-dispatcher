@@ -1,9 +1,12 @@
 version ?= 0.10.2
 
-ci: clean package
+ci: clean tools lint package
 
 clean:
 	rm -rf stage
+
+lint:
+	puppet epp validate */*.epp
 
 package: clean
 	mkdir -p stage
@@ -14,4 +17,7 @@ package: clean
 	    -x "*.git*" \
 	    -X "stage/aem-helloworld-publish-dispatcher-$(version).zip" *
 
-.PHONY: ci clean package
+tools:
+	gem install puppet
+
+.PHONY: ci clean lint package tools
