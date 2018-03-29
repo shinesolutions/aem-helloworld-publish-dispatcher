@@ -1,7 +1,11 @@
 version ?= 0.10.2
 
-package:
+ci: clean package
+
+clean:
 	rm -rf stage
+
+package: clean
 	mkdir -p stage
 	zip -r \
 	    -x "*.DS_Store" \
@@ -10,4 +14,4 @@ package:
 	    -x "*.git*" \
 	    -X "stage/aem-helloworld-publish-dispatcher-$(version).zip" *
 
-.PHONY: package
+.PHONY: ci clean package
