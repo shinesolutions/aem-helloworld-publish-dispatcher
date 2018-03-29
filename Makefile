@@ -1,4 +1,4 @@
-version ?= 0.10.2
+version ?= 0.10.3
 
 ci: clean tools lint package
 

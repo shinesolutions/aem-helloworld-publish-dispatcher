@@ -1,3 +1,6 @@
+### 0.10.3
+*
+
 ### 0.10.2
 * Add rule to deny cache invalidation #11
 
