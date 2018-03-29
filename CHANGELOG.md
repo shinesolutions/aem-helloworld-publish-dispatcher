@@ -1,5 +1,5 @@
 ### 0.10.2
-*
+* Add rule to deny cache invalidation #11
 
 ### 0.10.1
 * Parameterise all configuration directories
