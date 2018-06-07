@@ -7,6 +7,6 @@
     DispatcherLogLevel          warn
     DispatcherNoServerHeader    off
     DispatcherDeclineRoot       off
-    DispatcherUseProcessedURL   off
+    DispatcherUseProcessedURL   1
     DispatcherPassError         0
 </IfModule>
