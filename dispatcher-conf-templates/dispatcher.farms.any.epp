@@ -101,6 +101,9 @@
 #     /0027 { /type "allow" /url "/tmp/*"    }
 #     /0028 { /type "allow" /url "/var/*"    }
 
+      # AEM 6.4 exposes client library assets via proxy servlet
+      /0030 { /type "allow" /method "GET" /url "/etc.clientlibs/*" }
+
       # Enable extensions in non-public content directories, using a regular expression
       /0041
         {

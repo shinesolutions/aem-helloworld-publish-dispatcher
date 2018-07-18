@@ -1,3 +1,6 @@
+### 0.11.0
+* Add /etc.clientlibs/* to whitelist for AEM 6.4 support
+
 ### 0.10.3
 * Enable DispatcherUseProcessedURL dispatcher config #12
 
