@@ -1,3 +1,6 @@
+### 0.11.1
+*
+
 ### 0.11.0
 * Add /etc.clientlibs/* to whitelist for AEM 6.4 support
 * Modify build to use aem-platform-buildenv Docker image
