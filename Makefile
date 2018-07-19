@@ -1,6 +1,6 @@
 version ?= 0.10.3
 
-ci: clean tools lint package
+ci: clean lint package
 
 clean:
 	rm -rf stage
@@ -17,7 +17,4 @@ package: clean
 	    -x "*.git*" \
 	    -X "stage/aem-helloworld-publish-dispatcher-$(version).zip" *
 
-tools:
-	gem install puppet
-
-.PHONY: ci clean lint package tools
+.PHONY: ci clean lint package
