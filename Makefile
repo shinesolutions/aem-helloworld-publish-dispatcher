@@ -17,4 +17,7 @@ package: clean
 	    -x "*.git*" \
 	    -X "stage/aem-helloworld-publish-dispatcher-$(version).zip" *
 
-.PHONY: ci clean lint package
+release:
+	rtk release
+
+.PHONY: ci clean lint package release
