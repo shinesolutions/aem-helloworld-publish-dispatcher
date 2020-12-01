@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/shinesolutions/aem-helloworld-publish-dispatcher.svg)](http://travis-ci.org/shinesolutions/aem-helloworld-publish-dispatcher)
+[![Build Status](https://github.com/shinesolutions/aem-helloworld-publish-dispatcher/workflows/CI/badge.svg)](https://github.com/shinesolutions/aem-helloworld-publish-dispatcher/actions?query=workflow%3ACI)
 
 # AEM Hello World Publish-Dispatcher
 
