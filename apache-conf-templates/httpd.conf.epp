@@ -7,9 +7,9 @@ ServerName "<%= $facts[fqdn] %>"
 ServerRoot "/etc/httpd"
 PidFile run/httpd.pid
 Timeout 120
-KeepAlive Off
-MaxKeepAliveRequests 100
-KeepAliveTimeout 15
+KeepAlive On
+MaxKeepAliveRequests 0
+KeepAliveTimeout 65
 LimitRequestFieldSize 8190
 
 
