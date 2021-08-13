@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 ### Changed
-- Changed Apache keep alive configurations
+- Optimise Apache keep alive configurations (KeepAlive On, MaxKeepAliveRequests 0, KeepAliveTimeout 65)
 
 ## 0.11.1 - 2019-05-16
 ### Changed
