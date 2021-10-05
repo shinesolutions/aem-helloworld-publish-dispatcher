@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Fixed
+- Fix Publish GH Action broken make call
+
 ## 0.12.1 - 2021-10-05
 ### Fixed
 - Fix artifact extension in Makefile publish target
