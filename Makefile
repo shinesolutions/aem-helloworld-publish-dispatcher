@@ -17,7 +17,19 @@ package: clean
 	    -x "*.git*" \
 	    -X "stage/aem-helloworld-publish-dispatcher-$(version).zip" *
 
-release:
-	rtk release
+publish:
+	gh release create $(version) --title $(version) --notes "" || echo "Release $(version) has been created on GitHub"
+	gh release upload $(version) stage/aem-helloworld-publish-dispatcher-$(version).tar.gz
 
-.PHONY: ci clean lint package release
+release-major:
+	rtk release --release-increment-type major
+
+release-minor:
+	rtk release --release-increment-type minor
+
+release-patch:
+	rtk release --release-increment-type patch
+
+release: release-minor
+
+.PHONY: ci clean lint package publish release release-major release-minor release-patch
