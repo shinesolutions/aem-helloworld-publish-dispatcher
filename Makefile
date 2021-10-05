@@ -1,4 +1,4 @@
-version ?= 0.12.2-pre.0
+version ?= 0.12.2
 
 ci: clean lint package
 
