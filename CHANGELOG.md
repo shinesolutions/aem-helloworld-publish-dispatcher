@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Fixed
+- Fix artifact extension in Makefile publish target
+
 ## 0.12.0 - 2021-10-05
 ### Added
 - Add release-major, release-minor, release-patch, and publish Makefile targets and GitHub Actions

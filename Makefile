@@ -19,7 +19,7 @@ package: clean
 
 publish:
 	gh release create $(version) --title $(version) --notes "" || echo "Release $(version) has been created on GitHub"
-	gh release upload $(version) stage/aem-helloworld-publish-dispatcher-$(version).tar.gz
+	gh release upload $(version) stage/aem-helloworld-publish-dispatcher-$(version).zip
 
 release-major:
 	rtk release --release-increment-type major
