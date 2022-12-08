@@ -186,15 +186,14 @@
 
       # Security - Make Sure attempt to invalidate the Dispatcher cache is denied
       /0160 { /type "deny"  /url "/dispatcher/invalidate.cache" }
-      }
 
       # Security - Make Sure Access to Vulnerable URLs is Denied
       /0200 { /type "deny"  /url "/content/..;/crx/*" }
-      /0201 { /type "deny"  /url "*/crx*" }
-      /0202 { /type "deny"  /url "*..;*" }
-      /0203 { /type "deny"  /url "/content/.*/[.][.];/.*" }
-      /0204 { /type "deny"  /url "/truststore/*" }
-      /0206 { /type "deny"  /url ".[*" }
+      /0201 { /type "deny"  /url "/content/.*/[.][.];/.*" }
+      /0202 { /type "deny"  /url "*/crx*" }
+      /0203 { /type "deny"  /url "*..;*" }
+      /0204 { /type "deny"  /url "*/truststore*" }
+      }
 
     # The cache section regulates what responses will be cached and where.
     /cache
