@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 ### Added
-- Add rule to deny AEM endpoints.
+- Add rule to deny AEM endpoints RS-28 RS-29
 
 ## 0.12.2 - 2021-10-05
 ### Fixed
