@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Simplify GitHub Actions release workflows to not use custom action
+
 ## 0.13.0 - 2022-12-12
 ### Added
 - Add rule to deny AEM endpoints RS-28 RS-29
