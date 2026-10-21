@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Simplify Github workflows to not use action files
 
+### Fixed
+- Fix RTK config list index syntax
+
 ## 0.13.0 - 2022-12-12
 ### Added
 - Add rule to deny AEM endpoints RS-28 RS-29
