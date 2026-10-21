@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add markdownlint, yamllint, and jsonlint
+
 ### Changed
 - Simplify Github workflows to not use action files
 

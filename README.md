@@ -5,6 +5,7 @@
 This is an example AEM Hello World artifact that will be deployed to an AEM Publish-Dispatcher instance.
 
 This artifact contains:
+
 * [Apache configuration template(s)](https://httpd.apache.org/docs/2.4/configuring.html) in `apache-conf-templates` directory
 * [Apache Virtual Host template(s)](https://httpd.apache.org/docs/2.4/vhosts/) and [Apache RewriteMap template(s)](https://httpd.apache.org/docs/current/rewrite/rewritemap.html) in `virtual-hosts-templates` directory
 * [AEM Dispatcher configuration template(s)](https://docs.adobe.com/docs/en/dispatcher/disp-config.html) in `dispatcher-conf-templates` directory
@@ -18,7 +19,7 @@ Check out [Dispatcher Template Parameters](https://github.com/shinesolutions/pup
 
 To create artifact zip file:
 
-```
+```shell
 make package
 ```
 

@@ -7,6 +7,9 @@ clean:
 
 lint:
 	puppet epp validate */*.epp
+	markdownlint-cli2 README.md .github/ISSUE_TEMPLATE/*.md
+	yamllint .*.yaml .github/workflows/*.yaml
+	jsonlint .rtk.json
 
 package: clean
 	mkdir -p stage
