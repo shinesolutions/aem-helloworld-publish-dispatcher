@@ -3,7 +3,7 @@ ServerTokens OS
 ServerSignature On
 TraceEnable On
 
-ServerName "<%= $facts[fqdn] %>"
+ServerName "<%= $facts['networking']['fqdn'] %>"
 ServerRoot "/etc/httpd"
 PidFile run/httpd.pid
 Timeout 120
