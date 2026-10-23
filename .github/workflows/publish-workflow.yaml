@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: 1.0.0
       - uses: cliffano/command-docker-action@v2.1.0
         with:
           command: make clean package
